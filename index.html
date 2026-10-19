@@ -1,0 +1,803 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Master Shtamp — печати и штампы в Ташкенте</title>
+<meta name="description" content="Штампы для упаковки, стаканов, бенто, пакетов и коробок, печати для ООО и ИП, именные штампы и экслибрисы. Изготовление за 1–2 дня, доставка по Узбекистану. Ташкент.">
+<meta property="og:title" content="Master Shtamp — печати и штампы в Ташкенте">
+<meta property="og:description" content="Делаем ваш бизнес узнаваемым. Готовый штамп за 1–2 дня, доставка по Узбекистану.">
+<meta property="og:image" content="img/w01.jpg">
+<meta name="theme-color" content="#0e3b2c">
+<link rel="icon" href="img/logo.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700;900&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#f3efe6;
+  --paper-2:#ebe5d8;
+  --card:#fbf9f4;
+  --ink:#1c2fa8;
+  --ink-soft:#3349c9;
+  --red:#d7262b;
+  --green:#0e3b2c;
+  --green-2:#14523d;
+  --gold:#c9a45c;
+  --text:#16181d;
+  --muted:#5d6068;
+  --line:rgba(22,24,29,.12);
+  --radius:20px;
+  --wrap:1200px;
+  --ease:cubic-bezier(.2,.8,.2,1);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;overflow-x:clip}
+.marquee-outer{overflow:hidden;padding:14px 0;margin:-14px 0}
+body{
+  font-family:"Manrope",system-ui,sans-serif;
+  background:var(--paper);
+  color:var(--text);
+  line-height:1.55;
+  font-size:17px;
+  overflow-x:hidden;
+}
+/* paper grain */
+body::before{
+  content:"";position:fixed;inset:0;pointer-events:none;z-index:100;opacity:.35;mix-blend-mode:multiply;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .4 0 0 0 0 .35 0 0 0 0 .3 0 0 0 .09 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+button{font:inherit;cursor:pointer;border:0;background:none;color:inherit}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 24px}
+h1,h2,h3,.display{font-family:"Unbounded",sans-serif;line-height:1.05;letter-spacing:-.02em}
+.eyebrow{
+  display:inline-flex;align-items:center;gap:10px;
+  font-size:13px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--ink);
+}
+.eyebrow::before{content:"";width:28px;height:2px;background:currentColor}
+section{position:relative}
+.sec{padding:120px 0}
+.sec-head{display:flex;justify-content:space-between;align-items:flex-end;gap:32px;margin-bottom:56px;flex-wrap:wrap}
+.sec-head h2{font-size:clamp(34px,5vw,60px);margin-top:16px;max-width:760px}
+.sec-head p{max-width:380px;color:var(--muted)}
+
+/* Buttons */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:10px;
+  height:58px;padding:0 28px;border-radius:999px;font-weight:700;font-size:16px;
+  transition:transform .3s var(--ease),background .3s,color .3s,box-shadow .3s;
+  white-space:nowrap;
+}
+.btn svg{width:20px;height:20px;flex:none}
+.btn-ink{background:var(--ink);color:#fff;box-shadow:0 10px 30px -10px rgba(28,47,168,.7)}
+.btn-ink:hover{background:var(--ink-soft);transform:translateY(-2px)}
+.btn-line{border:1.5px solid var(--text)}
+.btn-line:hover{background:var(--text);color:var(--paper)}
+.btn-light{background:var(--paper);color:var(--green)}
+.btn-light:hover{transform:translateY(-2px);background:#fff}
+
+/* NAV */
+.nav{position:fixed;top:0;left:0;right:0;z-index:50;transition:background .3s,box-shadow .3s,backdrop-filter .3s}
+.nav.scrolled{background:rgba(243,239,230,.86);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);box-shadow:0 1px 0 var(--line)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:78px}
+.brand{display:flex;align-items:center;gap:12px;font-family:"Unbounded";font-weight:700;font-size:17px;letter-spacing:-.01em}
+.brand img{width:44px;height:44px;border-radius:50%;border:2px solid var(--green)}
+.brand small{display:block;font-family:"Manrope";font-weight:600;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.nav-links{display:flex;gap:34px;font-weight:600;font-size:15px}
+.nav-links a{position:relative;padding:6px 0}
+.nav-links a::after{content:"";position:absolute;left:0;right:100%;bottom:0;height:2px;background:var(--ink);transition:right .3s var(--ease)}
+.nav-links a:hover::after{right:0}
+.nav-cta{height:46px;padding:0 22px;font-size:15px}
+.burger{display:none;width:46px;height:46px;border-radius:50%;border:1.5px solid var(--text);align-items:center;justify-content:center}
+.burger span,.burger span::before,.burger span::after{display:block;width:18px;height:2px;background:var(--text);position:relative;transition:.3s}
+.burger span::before,.burger span::after{content:"";position:absolute;left:0}
+.burger span::before{top:-6px}.burger span::after{top:6px}
+.menu-open .burger span{background:transparent}
+.menu-open .burger span::before{top:0;transform:rotate(45deg)}
+.menu-open .burger span::after{top:0;transform:rotate(-45deg)}
+.mobile-menu{
+  position:fixed;inset:78px 0 0 0;background:var(--paper);z-index:49;padding:32px 24px;
+  display:flex;flex-direction:column;gap:6px;transform:translateY(-12px);opacity:0;pointer-events:none;transition:.35s var(--ease)
+}
+.menu-open .mobile-menu{opacity:1;transform:none;pointer-events:auto}
+.mobile-menu a{font-family:"Unbounded";font-size:28px;padding:12px 0;border-bottom:1px solid var(--line)}
+.mobile-menu .btn{margin-top:24px;font-family:"Manrope";font-size:16px;border:0}
+
+/* HERO */
+.hero{padding:150px 0 90px;overflow:hidden}
+.hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:center}
+.hero h1{font-size:clamp(40px,6.4vw,84px);font-weight:900;margin:22px 0 26px}
+.hero h1 .ink{color:var(--ink);position:relative;display:inline-block}
+.hero h1 .stampword{
+  display:inline-block;color:var(--red);border:.09em solid var(--red);border-radius:.16em;font-size:.52em;white-space:nowrap;vertical-align:.35em;
+  padding:.08em .3em;transform:rotate(-4deg);line-height:1.1;margin-left:.1em;letter-spacing:0;
+  animation:press .9s .5s var(--ease) both;
+  -webkit-mask-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='r'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2'/%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -2.2 1.6'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23r)'/%3E%3C/svg%3E");
+  mask-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='r'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2'/%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -2.2 1.6'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23r)'/%3E%3C/svg%3E");
+}
+@keyframes press{
+  0%{opacity:0;transform:rotate(-4deg) scale(1.9)}
+  60%{opacity:1;transform:rotate(-4deg) scale(.94)}
+  100%{opacity:1;transform:rotate(-4deg) scale(1)}
+}
+.hero-lead{font-size:19px;color:var(--muted);max-width:540px}
+.hero-cta{display:flex;gap:14px;margin-top:36px;flex-wrap:wrap}
+.hero-facts{display:grid;grid-template-columns:repeat(3,auto);gap:36px;margin-top:56px;padding-top:28px;border-top:1px solid var(--line);width:fit-content}
+.hero-facts b{display:block;font-family:"Unbounded";font-size:30px;font-weight:700;letter-spacing:-.02em}
+.hero-facts span{font-size:14px;color:var(--muted)}
+
+.hero-art{position:relative;height:620px}
+.hero-art .ph{position:absolute;border-radius:24px;overflow:hidden;box-shadow:0 30px 60px -25px rgba(20,20,30,.45)}
+.hero-art .ph img{width:100%;height:100%;object-fit:cover}
+.hero-art .p1{width:64%;height:78%;right:0;top:0;transform:rotate(2.5deg)}
+.hero-art .p2{width:50%;height:52%;left:0;bottom:0;transform:rotate(-4deg);border:8px solid var(--card)}
+.seal{position:absolute;left:4%;top:6%;width:170px;height:170px;z-index:3}
+.seal svg{width:100%;height:100%;animation:spin 26s linear infinite}
+.seal .core{position:absolute;inset:34px;border-radius:50%;background:var(--green);display:grid;place-items:center;color:var(--paper);font-family:"Unbounded";font-weight:700;font-size:13px;text-align:center;line-height:1.15;box-shadow:0 10px 30px -10px rgba(14,59,44,.8)}
+.seal .core b{display:block;font-size:30px;color:var(--gold)}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+/* MARQUEE */
+.marquee{background:var(--green);color:var(--paper);padding:22px 0;overflow:hidden;transform:rotate(-1.2deg);margin:0 -20px;position:relative;z-index:2}
+.marquee-track{display:flex;width:max-content;animation:marq 38s linear infinite}
+.marquee-track span{font-family:"Unbounded";font-size:22px;font-weight:500;padding:0 26px;display:flex;align-items:center;gap:52px;white-space:nowrap}
+.marquee-track span::after{content:"✦";color:var(--gold);font-size:18px}
+@keyframes marq{to{transform:translateX(-50%)}}
+
+/* SERVICES */
+.services{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.svc{
+  background:var(--card);border-radius:var(--radius);overflow:hidden;border:1px solid var(--line);
+  display:flex;flex-direction:column;transition:transform .45s var(--ease),box-shadow .45s;
+}
+.svc:hover{transform:translateY(-6px);box-shadow:0 30px 50px -30px rgba(20,20,40,.35)}
+.svc-img{aspect-ratio:4/3;overflow:hidden;position:relative}
+.svc-img img{width:100%;height:100%;object-fit:cover;transition:transform .8s var(--ease)}
+.svc:hover .svc-img img{transform:scale(1.06)}
+.svc-num{position:absolute;top:16px;left:16px;background:var(--paper);border-radius:999px;padding:6px 14px;font-weight:800;font-size:13px}
+.svc-body{padding:26px 26px 30px}
+.svc h3{font-size:21px;margin-bottom:10px}
+.svc p{color:var(--muted);font-size:15.5px}
+.svc .tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+.svc .tags i{font-style:normal;font-size:13px;font-weight:600;padding:6px 12px;border-radius:999px;background:var(--paper-2)}
+
+/* WHY */
+.why{background:var(--green);color:var(--paper);border-radius:36px;margin:0 16px;overflow:hidden}
+.why .eyebrow{color:var(--gold)}
+.why .sec-head p{color:rgba(243,239,230,.7)}
+.why-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(243,239,230,.14);border-radius:var(--radius);overflow:hidden}
+.why-item{background:var(--green);padding:34px 28px 38px}
+.why-item .ic{width:54px;height:54px;border-radius:16px;background:rgba(201,164,92,.15);display:grid;place-items:center;margin-bottom:26px;color:var(--gold)}
+.why-item .ic svg{width:26px;height:26px}
+.why-item h3{font-size:20px;margin-bottom:10px}
+.why-item p{color:rgba(243,239,230,.72);font-size:15.5px}
+
+/* TERMS */
+.terms{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.term{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:34px 30px;position:relative;overflow:hidden}
+.term .big{font-family:"Unbounded";font-size:64px;font-weight:900;letter-spacing:-.04em;color:var(--ink);line-height:1}
+.term .big small{font-size:22px;font-weight:700;margin-left:6px;letter-spacing:0}
+.term h3{font-size:18px;margin:22px 0 10px}
+.term p{color:var(--muted);font-size:15.5px}
+.term.hot{background:var(--red);color:#fff;border-color:transparent}
+.term.hot .big{color:#fff}
+.term.hot p{color:rgba(255,255,255,.85)}
+
+/* PRICE */
+.price-wrap{display:grid;grid-template-columns:1.25fr .75fr;gap:22px;align-items:start}
+.price-card{background:var(--card);border:1px solid var(--line);border-radius:28px;padding:40px}
+.price-card h3{font-size:24px}
+.price-card .sub{color:var(--muted);margin-top:6px;font-size:15px}
+.price-list{margin-top:28px;display:grid;grid-template-columns:1fr 1fr;grid-template-rows:repeat(6,auto);grid-auto-flow:column;column-gap:40px}
+.price-row{display:flex;align-items:baseline;gap:10px;padding:15px 0;border-bottom:1px dashed var(--line)}
+.price-row .s{font-weight:700}
+.price-row .s em{font-style:normal;color:var(--muted);font-weight:500;font-size:14px}
+.price-row .dots{flex:1}
+.price-row .v{font-family:"Unbounded";font-weight:700;font-size:17px;color:var(--ink);white-space:nowrap}
+.price-row .v small{font-family:"Manrope";font-size:12px;color:var(--muted);font-weight:600;margin-left:3px}
+.price-note{margin-top:24px;font-size:14px;color:var(--muted)}
+.inks{background:var(--text);color:var(--paper);border-radius:28px;padding:40px;position:relative;overflow:hidden}
+.inks h3{font-size:24px}
+.inks p{color:rgba(243,239,230,.72);margin-top:10px;font-size:15.5px}
+.inks ul{list-style:none;margin-top:24px;display:grid;gap:12px}
+.inks li{display:flex;gap:12px;font-size:15.5px}
+.inks li::before{content:"";flex:none;width:7px;height:7px;border-radius:50%;background:var(--gold);margin-top:9px}
+.swatches{display:flex;gap:12px;margin-top:30px}
+.sw{flex:1;border-radius:16px;padding:16px 14px;font-weight:700;font-size:14px;color:#fff;height:96px;display:flex;align-items:flex-end}
+.sw.b{background:var(--ink)}.sw.r{background:var(--red)}.sw.k{background:#000;border:1px solid rgba(255,255,255,.2)}
+
+/* ORDER */
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;counter-reset:st}
+.step{padding:34px 30px 36px;border-radius:var(--radius);background:var(--card);border:1px solid var(--line);position:relative}
+.step::before{counter-increment:st;content:"0" counter(st);font-family:"Unbounded";font-weight:900;font-size:15px;color:#fff;background:var(--ink);width:46px;height:46px;border-radius:50%;display:grid;place-items:center;margin-bottom:26px}
+.step h3{font-size:20px;margin-bottom:10px}
+.step p{color:var(--muted);font-size:15.5px}
+.step .formats{display:flex;gap:8px;margin-top:16px}
+.step .formats i{font-style:normal;font-weight:800;font-size:12px;padding:5px 10px;border:1.5px solid var(--ink);color:var(--ink);border-radius:8px;letter-spacing:.06em}
+
+/* GALLERY */
+.gallery{columns:4 240px;column-gap:18px}
+.gallery a{display:block;margin-bottom:18px;border-radius:18px;overflow:hidden;position:relative;break-inside:avoid}
+.gallery img{width:100%;transition:transform .8s var(--ease)}
+.gallery a::after{
+  content:"Смотреть в Instagram ↗";position:absolute;inset:auto 12px 12px 12px;padding:10px 14px;border-radius:12px;
+  background:rgba(243,239,230,.92);font-weight:700;font-size:13px;opacity:0;transform:translateY(8px);transition:.35s var(--ease)
+}
+.gallery a:hover img{transform:scale(1.05)}
+.gallery a:hover::after{opacity:1;transform:none}
+
+/* QUOTE */
+.quote{text-align:center;padding:110px 0}
+.quote blockquote{font-family:"Unbounded";font-weight:500;font-size:clamp(28px,4.2vw,52px);line-height:1.15;letter-spacing:-.02em;max-width:980px;margin:0 auto}
+.quote blockquote em{font-style:normal;color:var(--ink)}
+.quote cite{display:block;margin-top:26px;font-style:normal;color:var(--muted);font-weight:600}
+
+/* FAQ */
+.faq{max-width:900px}
+.faq details{border-bottom:1px solid var(--line)}
+.faq summary{list-style:none;cursor:pointer;padding:26px 0;display:flex;justify-content:space-between;gap:24px;font-weight:700;font-size:19px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";font-family:"Unbounded";font-size:26px;line-height:1;color:var(--ink);transition:transform .3s}
+.faq details[open] summary::after{transform:rotate(45deg)}
+.faq details p{padding:0 0 26px;color:var(--muted);max-width:720px}
+
+/* CONTACT */
+.contact{background:var(--ink);color:#fff;border-radius:36px;margin:0 16px 16px;overflow:hidden}
+.contact .wrap{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
+.contact h2{font-size:clamp(36px,5vw,64px)}
+.contact .eyebrow{color:#fff}
+.contact .lead{color:rgba(255,255,255,.78);margin-top:20px;max-width:460px}
+.c-list{margin-top:40px;display:grid;gap:12px}
+.c-item{display:flex;align-items:center;gap:16px;padding:18px 20px;border-radius:18px;background:rgba(255,255,255,.08);transition:background .3s}
+.c-item:hover{background:rgba(255,255,255,.16)}
+.c-item .ic{width:46px;height:46px;border-radius:14px;background:#fff;color:var(--ink);display:grid;place-items:center;flex:none}
+.c-item .ic svg{width:22px;height:22px}
+.c-item small{display:block;color:rgba(255,255,255,.65);font-size:13px;font-weight:600}
+.c-item b{font-size:17px}
+.form{background:var(--paper);color:var(--text);border-radius:28px;padding:36px}
+.form h3{font-size:22px}
+.form p.s{color:var(--muted);font-size:14.5px;margin:8px 0 24px}
+.field{display:block;margin-bottom:14px}
+.field span{display:block;font-size:13px;font-weight:700;margin-bottom:6px}
+.field input,.field select,.field textarea{
+  width:100%;font:inherit;font-size:16px;padding:14px 16px;border-radius:14px;border:1.5px solid var(--line);background:var(--card);color:var(--text);transition:border-color .2s
+}
+.field textarea{min-height:96px;resize:vertical}
+.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--ink)}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.form .btn{width:100%;margin-top:8px}
+.form .hint{font-size:13px;color:var(--muted);margin-top:12px;text-align:center}
+
+footer{padding:40px 0 110px}
+footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap;color:var(--muted);font-size:14px}
+footer .brand{color:var(--text)}
+
+/* sticky mobile CTA */
+.mcta{display:none;position:fixed;left:12px;right:12px;bottom:12px;z-index:60;gap:10px}
+.mcta .btn{flex:1;height:54px}
+
+/* stamp-in reveal */
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .9s var(--ease),transform .9s var(--ease)}
+.reveal.in{opacity:1;transform:none}
+.stamp-in{opacity:0;transform:scale(1.25) rotate(-2deg)}
+.stamp-in.in{animation:stampin .7s var(--ease) both}
+@keyframes stampin{0%{opacity:0;transform:scale(1.25) rotate(-2deg)}60%{opacity:1;transform:scale(.97) rotate(0)}100%{opacity:1;transform:none}}
+
+.toast{position:fixed;left:50%;bottom:90px;transform:translate(-50%,20px);background:var(--text);color:var(--paper);padding:14px 22px;border-radius:14px;font-weight:600;font-size:15px;opacity:0;pointer-events:none;transition:.35s var(--ease);z-index:80;max-width:calc(100% - 32px);text-align:center}
+.toast.show{opacity:1;transform:translate(-50%,0)}
+
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .reveal,.stamp-in{opacity:1;transform:none}
+}
+
+/* RESPONSIVE */
+@media (max-width:1080px){
+  .nav-links{display:none}
+  .burger{display:flex}
+  .nav-cta{display:none}
+  .hero .wrap{grid-template-columns:1fr}
+  .hero-art{height:520px;max-width:620px;width:100%;margin:0 auto}
+  .why-grid{grid-template-columns:1fr 1fr}
+  .services{grid-template-columns:1fr 1fr}
+  .price-wrap{grid-template-columns:1fr}
+  .contact .wrap{grid-template-columns:1fr}
+}
+@media (max-width:760px){
+  body{font-size:16px}
+  .wrap{padding:0 16px}
+  .sec{padding:80px 0}
+  .sec-head{margin-bottom:36px}
+  .sec-head h2{font-size:clamp(28px,8vw,40px)}
+  .hero{padding:120px 0 60px}
+  .hero-lead{font-size:17px}
+  .hero-cta .btn{flex:1}
+  .hero-facts{grid-template-columns:repeat(3,1fr);gap:16px;width:100%}
+  .hero-facts b{font-size:22px}
+  .hero-facts span{font-size:12.5px}
+  .hero-art{height:420px}
+  .seal{width:120px;height:120px;left:0;top:0}
+  .seal .core{inset:24px;font-size:10px}
+  .seal .core b{font-size:22px}
+  .marquee-track span{font-size:17px;gap:36px;padding:0 18px}
+  .services,.terms,.steps,.why-grid{grid-template-columns:1fr}
+  .price-card,.inks,.form{padding:26px 20px}
+  .price-list{grid-template-columns:1fr;grid-template-rows:none;grid-auto-flow:row}
+  .term .big{font-size:52px}
+  .why,.contact{margin:0 8px;border-radius:26px}
+  .contact{margin-bottom:8px}
+  .gallery{columns:2;column-gap:10px}
+  .gallery a{margin-bottom:10px;border-radius:12px}
+  .row2{grid-template-columns:1fr}
+  .faq summary{font-size:17px}
+  .mcta{display:flex}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<header class="nav" id="nav">
+  <div class="wrap">
+    <a href="#top" class="brand" aria-label="Master Shtamp — на главную">
+      <img src="img/logo.jpg" alt="Логотип Master Shtamp" width="44" height="44">
+      <span>Master Shtamp<small>Печати и штампы · Ташкент</small></span>
+    </a>
+    <nav class="nav-links" aria-label="Основная навигация">
+      <a href="#services">Услуги</a>
+      <a href="#price">Прайс</a>
+      <a href="#order">Как заказать</a>
+      <a href="#works">Работы</a>
+      <a href="#contacts">Контакты</a>
+    </nav>
+    <a class="btn btn-ink nav-cta" href="https://t.me/mastershtampuz" target="_blank" rel="noopener">Написать в Telegram</a>
+    <button class="burger" id="burger" aria-label="Открыть меню" aria-expanded="false"><span></span></button>
+  </div>
+</header>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#services">Услуги</a>
+  <a href="#price">Прайс</a>
+  <a href="#order">Как заказать</a>
+  <a href="#works">Работы</a>
+  <a href="#contacts">Контакты</a>
+  <a class="btn btn-ink" href="https://t.me/mastershtampuz" target="_blank" rel="noopener">Написать в Telegram</a>
+</div>
+
+<main id="top">
+
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <span class="eyebrow">Мастерская штампов в Ташкенте</span>
+      <h1>Делаем ваш бизнес <span class="ink">узнаваемым</span> <span class="stampword">одним оттиском</span></h1>
+      <p class="hero-lead">Штампы для упаковки, пакетов, коробок, стаканов и бенто. Печати для ООО, ИП и врачей, именные штампы и экслибрисы. Любой дизайн, надпись или рисунок — сделаем с душой.</p>
+      <div class="hero-cta">
+        <a class="btn btn-ink" href="https://t.me/mastershtampuz" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M21.9 4.3 18.7 19.4c-.2 1-.9 1.3-1.8.8l-4.9-3.6-2.4 2.3c-.3.3-.5.5-1 .5l.4-5 9.1-8.2c.4-.4-.1-.6-.6-.2L6.2 13.1l-4.8-1.5c-1-.3-1.1-1 .2-1.5L20.5 2.9c.9-.3 1.6.2 1.4 1.4Z"/></svg>
+          Заказать штамп
+        </a>
+        <a class="btn btn-line" href="#price">Смотреть прайс</a>
+      </div>
+      <div class="hero-facts">
+        <div><b>1–2 дня</b><span>готовый штамп</span></div>
+        <div><b>24/7</b><span>принимаем заказы</span></div>
+        <div><b>17K+</b><span>подписчиков</span></div>
+      </div>
+    </div>
+    <div class="hero-art" aria-hidden="true">
+      <div class="ph p1"><img src="img/w01.jpg" alt=""></div>
+      <div class="ph p2"><img src="img/w11.jpg" alt=""></div>
+      <div class="seal">
+        <svg viewBox="0 0 200 200">
+          <defs><path id="circ" d="M100,100 m-82,0 a82,82 0 1,1 164,0 a82,82 0 1,1 -164,0"/></defs>
+          <circle cx="100" cy="100" r="97" fill="#f3efe6"/>
+          <circle cx="100" cy="100" r="95" fill="none" stroke="#1c2fa8" stroke-width="2"/>
+          <text font-family="Unbounded" font-size="15.5" font-weight="700" fill="#1c2fa8" letter-spacing="3.2">
+            <textPath href="#circ">MASTER SHTAMP • ТАШКЕНТ • С ДУШОЙ •</textPath>
+          </text>
+        </svg>
+        <div class="core"><div><b>1</b>день<br>и готово</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="marquee-outer"><div class="marquee" aria-hidden="true">
+  <div class="marquee-track">
+    <span>Упаковка</span><span>Стаканы</span><span>Бенто-боксы</span><span>Пакеты</span><span>Коробки</span><span>Печати ООО / ИП</span><span>Экслибрисы</span><span>Именные штампы</span><span>Логотипы</span>
+    <span>Упаковка</span><span>Стаканы</span><span>Бенто-боксы</span><span>Пакеты</span><span>Коробки</span><span>Печати ООО / ИП</span><span>Экслибрисы</span><span>Именные штампы</span><span>Логотипы</span>
+  </div>
+</div></div>
+
+<!-- SERVICES -->
+<section class="sec" id="services">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <span class="eyebrow">Что мы делаем</span>
+        <h2 class="stamp-in">Штампы под любую задачу</h2>
+      </div>
+      <p class="reveal">От маленькой кондитерской до крупной компании — изготовим оснастку под ваш размер, логотип и бюджет.</p>
+    </div>
+    <div class="services">
+      <article class="svc reveal">
+        <div class="svc-img"><img src="img/w03.jpg" alt="Штамп кондитера на бенто-боксе и крафтовой упаковке" loading="lazy"><span class="svc-num">01</span></div>
+        <div class="svc-body">
+          <h3>Штампы для упаковки</h3>
+          <p>Ваш логотип на пакетах, коробках, стаканах и бенто-боксах. Дешевле печати упаковки — и выглядит стильно.</p>
+          <div class="tags"><i>Кафе</i><i>Кондитерские</i><i>Магазины</i></div>
+        </div>
+      </article>
+      <article class="svc reveal">
+        <div class="svc-img"><img src="img/w06.jpg" alt="Автоматические печати для ООО, ИП и врачей" loading="lazy"><span class="svc-num">02</span></div>
+        <div class="svc-body">
+          <h3>Печати ООО, ИП, врачей</h3>
+          <p>Круглые и прямоугольные печати на автоматической оснастке Colop и Trodat. Срочно — день в день.</p>
+          <div class="tags"><i>ООО</i><i>ИП</i><i>Врачи</i></div>
+        </div>
+      </article>
+      <article class="svc reveal">
+        <div class="svc-img"><img src="img/w02.jpg" alt="Экслибрисы — штампы для личной библиотеки" loading="lazy"><span class="svc-num">03</span></div>
+        <div class="svc-body">
+          <h3>Экслибрисы</h3>
+          <p>«From the library of…» — именной знак для домашней библиотеки. Лучший подарок для тех, кто любит книги.</p>
+          <div class="tags"><i>Подарок</i><i>Книги</i></div>
+        </div>
+      </article>
+      <article class="svc reveal">
+        <div class="svc-img"><img src="img/w09.jpg" alt="Именные штампы для банка и офиса" loading="lazy"><span class="svc-num">04</span></div>
+        <div class="svc-body">
+          <h3>Офисные и именные штампы</h3>
+          <p>Штампы с ФИО, реквизитами, «Оплачено», «Копия верна» — для банков, офисов и бухгалтерии.</p>
+          <div class="tags"><i>Банки</i><i>Офисы</i><i>Бухгалтерия</i></div>
+        </div>
+      </article>
+      <article class="svc reveal">
+        <div class="svc-img"><img src="img/w01.jpg" alt="Штампы для маркировки продукции: картошка, сыр, творог, мясо" loading="lazy"><span class="svc-num">05</span></div>
+        <div class="svc-body">
+          <h3>Маркировка продукции</h3>
+          <p>Штампы-надписи для маркировки начинок, вкусов и товаров: быстро, аккуратно, без наклеек.</p>
+          <div class="tags"><i>Производство</i><i>Кухня</i></div>
+        </div>
+      </article>
+      <article class="svc reveal">
+        <div class="svc-img"><img src="img/w10.jpg" alt="Круглые печати от 10 мм с логотипами" loading="lazy"><span class="svc-num">06</span></div>
+        <div class="svc-body">
+          <h3>Логотипы и карты лояльности</h3>
+          <p>Круглые печати от 10 мм для карт кофеен, учителей и брендов. Любой рисунок — отрисуем сами.</p>
+          <div class="tags"><i>Кофейни</i><i>Учителя</i><i>Бренды</i></div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- WHY -->
+<section class="sec why">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <span class="eyebrow">Почему мы</span>
+        <h2 class="stamp-in">Каждая печать — маленькая история доверия</h2>
+      </div>
+      <p class="reveal">Работаем с бизнесом и частными клиентами по всему Узбекистану.</p>
+    </div>
+    <div class="why-grid">
+      <div class="why-item reveal">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"/></svg></div>
+        <h3>Быстро</h3>
+        <p>Готовый штамп за 1–2 дня. По готовому макету или шаблону — за 1 день.</p>
+      </div>
+      <div class="why-item reveal">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19l7-7 3 3-7 7-3-3z"/><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/><path d="M2 2l7.586 7.586"/><circle cx="11" cy="11" r="2"/></svg></div>
+        <h3>Свой дизайн</h3>
+        <p>Отрисуем логотип с нуля или доработаем ваш — согласуем каждую деталь.</p>
+      </div>
+      <div class="why-item reveal">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div>
+        <h3>24/7 на связи</h3>
+        <p>Пишите в Telegram в любое время — ответим и подберём оснастку.</p>
+      </div>
+      <div class="why-item reveal">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13"/><path d="M16 8h4l3 3v5h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg></div>
+        <h3>Доставка</h3>
+        <p>Отправляем готовые штампы по Ташкенту и всему Узбекистану.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TERMS -->
+<section class="sec" id="terms">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <span class="eyebrow">Сроки изготовления</span>
+        <h2 class="stamp-in">Быстрее, чем вы думаете</h2>
+      </div>
+    </div>
+    <div class="terms">
+      <div class="term reveal">
+        <div class="big">1<small>день</small></div>
+        <h3>Есть готовый макет</h3>
+        <p>Макет в векторе (PDF, CDR, SVG) в чёрном цвете или заказ по нашему шаблону.</p>
+      </div>
+      <div class="term reveal">
+        <div class="big">1–2<small>дня</small></div>
+        <h3>Нужен дизайн</h3>
+        <p>Создадим макет или отрисуем ваш логотип, согласуем и изготовим.</p>
+      </div>
+      <div class="term hot reveal">
+        <div class="big">+30%</div>
+        <h3>Срочный заказ</h3>
+        <p>Нужно ещё быстрее? Сделаем день в день с надбавкой 30% к цене штампа.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICE -->
+<section class="sec" id="price" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <span class="eyebrow">Прайс</span>
+        <h2 class="stamp-in">Индивидуальные штампы</h2>
+      </div>
+      <p class="reveal">Дизайн по вашим пожеланиям. Ручной штамп, корпус из алюкобонда.</p>
+    </div>
+    <div class="price-wrap">
+      <div class="price-card reveal">
+        <h3>Размер и стоимость</h3>
+        <p class="sub">Цены в сумах, указан размер оттиска</p>
+        <div class="price-list">
+          <div class="price-row"><span class="s">2 × 2 <em>см</em></span><span class="dots"></span><span class="v">50 000<small>сум</small></span></div>
+          <div class="price-row"><span class="s">4×2 – 6×2 <em>см</em></span><span class="dots"></span><span class="v">80 000<small>сум</small></span></div>
+          <div class="price-row"><span class="s">5 × 5 <em>см</em></span><span class="dots"></span><span class="v">100 000<small>сум</small></span></div>
+          <div class="price-row"><span class="s">5 × 10 <em>см</em></span><span class="dots"></span><span class="v">150 000<small>сум</small></span></div>
+          <div class="price-row"><span class="s">7 × 7 <em>см</em></span><span class="dots"></span><span class="v">150 000<small>сум</small></span></div>
+          <div class="price-row"><span class="s">8 × 8 <em>см</em></span><span class="dots"></span><span class="v">200 000<small>сум</small></span></div>
+          <div class="price-row"><span class="s">6 × 6 <em>см</em></span><span class="dots"></span><span class="v">110 000<small>сум</small></span></div>
+          <div class="price-row"><span class="s">6 × 10 <em>см</em></span><span class="dots"></span><span class="v">180 000<small>сум</small></span></div>
+          <div class="price-row"><span class="s">7 × 10 <em>см</em></span><span class="dots"></span><span class="v">210 000<small>сум</small></span></div>
+          <div class="price-row"><span class="s">7 × 14 <em>см</em></span><span class="dots"></span><span class="v">300 000<small>сум</small></span></div>
+          <div class="price-row"><span class="s">8 × 14 <em>см</em></span><span class="dots"></span><span class="v">340 000<small>сум</small></span></div>
+          <div class="price-row"><span class="s">Другой размер</span><span class="dots"></span><span class="v" style="font-size:15px">по запросу</span></div>
+        </div>
+        <p class="price-note">Автоматическая оснастка (Colop, Trodat), печати для ООО/ИП и круглые штампы от 10 мм — стоимость уточняйте у менеджера.</p>
+      </div>
+      <aside class="inks reveal">
+        <h3>Подушка и краска</h3>
+        <p>Можно приобрести отдельно — в стоимость штампа не входят.</p>
+        <ul>
+          <li>Подушка подходит для всех штампов и даёт чёткий, ровный оттиск</li>
+          <li>Краска насыщенного цвета: быстро высыхает и не растекается</li>
+        </ul>
+        <div class="swatches">
+          <div class="sw b">Синий</div>
+          <div class="sw r">Красный</div>
+          <div class="sw k">Чёрный</div>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- ORDER -->
+<section class="sec" id="order" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <span class="eyebrow">Как заказать</span>
+        <h2 class="stamp-in">Три пути к вашему штампу</h2>
+      </div>
+      <p class="reveal">Выберите вариант, который подходит вам — дальше всё сделаем мы.</p>
+    </div>
+    <div class="steps">
+      <div class="step reveal">
+        <h3>Есть логотип</h3>
+        <p>Пришлите его в Telegram или в Direct с нужными размерами и цветом штампа — предложим варианты оснастки.</p>
+      </div>
+      <div class="step reveal">
+        <h3>Есть макет в векторе</h3>
+        <p>Доработка будет бесплатной. Подойдёт и чёрно-белый макет в очень хорошем качестве.</p>
+        <div class="formats"><i>PDF</i><i>CDR</i><i>SVG</i></div>
+      </div>
+      <div class="step reveal">
+        <h3>Ничего нет</h3>
+        <p>Напишите пожелания или выберите готовый шаблон. Если нужна отрисовка или доработка — согласуем всё заранее.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="sec" id="works" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <span class="eyebrow">Наши работы</span>
+        <h2 class="stamp-in">Оттиски, которые запоминают</h2>
+      </div>
+      <a class="btn btn-line reveal" href="https://www.instagram.com/master_shtamp_/" target="_blank" rel="noopener">Ещё в Instagram ↗</a>
+    </div>
+    <div class="gallery">
+      <a href="https://www.instagram.com/master_shtamp_/p/DI31iu5NJaZ/" target="_blank" rel="noopener" class="reveal"><img src="img/w11.jpg" alt="Именные печати и штамп «Оплачено»" loading="lazy"></a>
+      <a href="https://www.instagram.com/master_shtamp_/reel/DRPgjp_jW9w/" target="_blank" rel="noopener" class="reveal"><img src="img/w03.jpg" alt="Штамп кондитера на упаковке" loading="lazy"></a>
+      <a href="https://www.instagram.com/master_shtamp_/p/DdUR0Ixt_XU/" target="_blank" rel="noopener" class="reveal"><img src="img/w01.jpg" alt="Штампы для маркировки продукции" loading="lazy"></a>
+      <a href="https://www.instagram.com/master_shtamp_/reel/DdUPjEYtetD/" target="_blank" rel="noopener" class="reveal"><img src="img/w02.jpg" alt="Экслибрисы ручной работы" loading="lazy"></a>
+      <a href="https://www.instagram.com/master_shtamp_/reel/DRO_SjYDeMc/" target="_blank" rel="noopener" class="reveal"><img src="img/w04.jpg" alt="Брендирование стаканов и пакетов" loading="lazy"></a>
+      <a href="https://www.instagram.com/master_shtamp_/p/DIgyM7VIltb/" target="_blank" rel="noopener" class="reveal"><img src="img/w10.jpg" alt="Круглые печати от 10 мм" loading="lazy"></a>
+      <a href="https://www.instagram.com/master_shtamp_/reel/DOmMVL9Dbrx/" target="_blank" rel="noopener" class="reveal"><img src="img/w05.jpg" alt="Экслибрис в подарок" loading="lazy"></a>
+      <a href="https://www.instagram.com/master_shtamp_/reel/DNMCf_LOl-m/" target="_blank" rel="noopener" class="reveal"><img src="img/w07.jpg" alt="Штамп с логотипом кофейни" loading="lazy"></a>
+      <a href="https://www.instagram.com/master_shtamp_/p/DJE-4y4NsuG/" target="_blank" rel="noopener" class="reveal"><img src="img/w09.jpg" alt="Именные штампы для банка" loading="lazy"></a>
+      <a href="https://www.instagram.com/master_shtamp_/reel/DMI4saAN1XA/" target="_blank" rel="noopener" class="reveal"><img src="img/w08.jpg" alt="Круглая печать косметолога" loading="lazy"></a>
+      <a href="https://www.instagram.com/master_shtamp_/reel/DNqMaEdt-bi/" target="_blank" rel="noopener" class="reveal"><img src="img/w06.jpg" alt="Печати для ООО, ИП и врачей" loading="lazy"></a>
+      <a href="https://www.instagram.com/master_shtamp_/reel/DH8IRcItzk_/" target="_blank" rel="noopener" class="reveal"><img src="img/w12.jpg" alt="Штамп в подарок" loading="lazy"></a>
+    </div>
+  </div>
+</section>
+
+<section class="quote">
+  <div class="wrap">
+    <blockquote class="reveal">Именной штамп — это не просто штамп, это <em>стиль</em>. Для упаковки, брендирования, творчества или просто чтобы добавить изюминку.</blockquote>
+    <cite class="reveal">— Master Shtamp</cite>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="sec" id="faq" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <span class="eyebrow">Вопросы</span>
+        <h2 class="stamp-in">Частые вопросы</h2>
+      </div>
+    </div>
+    <div class="faq">
+      <details class="reveal"><summary>Сколько времени занимает изготовление?</summary><p>При наличии макета в векторе или заказе по шаблону — 1 день. Если нужно создать макет или отрисовать логотип — 1–2 дня. Срочный заказ возможен с надбавкой 30%.</p></details>
+      <details class="reveal"><summary>В каком формате присылать макет?</summary><p>Лучше всего — вектор в чёрном цвете: PDF, CDR или SVG. Подойдёт и чёрно-белый макет в очень хорошем качестве. Если макета нет — поможем с дизайном.</p></details>
+      <details class="reveal"><summary>Входит ли подушка и краска в стоимость?</summary><p>Нет, подушку и краску можно приобрести отдельно. Доступны цвета: синий, красный и чёрный.</p></details>
+      <details class="reveal"><summary>Делаете ли вы печати для ООО и ИП?</summary><p>Да, изготавливаем печати для ООО, ИП и врачей на автоматической оснастке. Возможно изготовление день в день.</p></details>
+      <details class="reveal"><summary>Есть ли доставка?</summary><p>Да, доставляем готовые штампы по Ташкенту и по всему Узбекистану.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="sec contact" id="contacts">
+  <div class="wrap">
+    <div>
+      <span class="eyebrow">Контакты</span>
+      <h2 class="stamp-in" style="margin-top:16px">Закажите штамп сегодня</h2>
+      <p class="lead">Работаем 24/7 — пишите в Telegram, звоните или оставьте заявку. Ответим, подберём размер и оснастку.</p>
+      <div class="c-list">
+        <a class="c-item" href="https://t.me/mastershtampuz" target="_blank" rel="noopener">
+          <span class="ic"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M21.9 4.3 18.7 19.4c-.2 1-.9 1.3-1.8.8l-4.9-3.6-2.4 2.3c-.3.3-.5.5-1 .5l.4-5 9.1-8.2c.4-.4-.1-.6-.6-.2L6.2 13.1l-4.8-1.5c-1-.3-1.1-1 .2-1.5L20.5 2.9c.9-.3 1.6.2 1.4 1.4Z"/></svg></span>
+          <span><small>Telegram · 24/7</small><b>@mastershtampuz</b></span>
+        </a>
+        <a class="c-item" href="tel:+998958024343">
+          <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.18 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.1 9.9a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg></span>
+          <span><small>Телефон</small><b>+998 95 802 43 43</b></span>
+        </a>
+        <a class="c-item" href="https://www.instagram.com/master_shtamp_/" target="_blank" rel="noopener">
+          <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></span>
+          <span><small>Instagram · 17K подписчиков</small><b>@master_shtamp_</b></span>
+        </a>
+        <a class="c-item" href="https://t.me/+edlBc4yQNek4ZThi" target="_blank" rel="noopener">
+          <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l18-8-8 18-2-8-8-2z"/></svg></span>
+          <span><small>Telegram-канал</small><b>Шаблоны и новые работы</b></span>
+        </a>
+      </div>
+    </div>
+    <form class="form" id="orderForm" novalidate>
+      <h3>Заявка на штамп</h3>
+      <p class="s">Заполните форму — мы соберём сообщение, вам останется отправить его в Telegram.</p>
+      <label class="field"><span>Ваше имя</span><input name="name" required autocomplete="name" placeholder="Как к вам обращаться"></label>
+      <div class="row2">
+        <label class="field"><span>Телефон</span><input name="phone" type="tel" autocomplete="tel" placeholder="+998"></label>
+        <label class="field"><span>Что нужно</span>
+          <select name="type">
+            <option>Штамп для упаковки</option>
+            <option>Печать ООО / ИП</option>
+            <option>Экслибрис</option>
+            <option>Именной / офисный штамп</option>
+            <option>Штамп с логотипом</option>
+            <option>Другое</option>
+          </select>
+        </label>
+      </div>
+      <div class="row2">
+        <label class="field"><span>Размер</span>
+          <select name="size">
+            <option>Пока не знаю</option>
+            <option>2 × 2 см</option><option>4×2 – 6×2 см</option><option>5 × 5 см</option><option>5 × 10 см</option>
+            <option>6 × 6 см</option><option>6 × 10 см</option><option>7 × 7 см</option><option>7 × 10 см</option>
+            <option>7 × 14 см</option><option>8 × 8 см</option><option>8 × 14 см</option>
+          </select>
+        </label>
+        <label class="field"><span>Есть макет?</span>
+          <select name="mockup"><option>Есть логотип</option><option>Есть вектор (PDF/CDR/SVG)</option><option>Нужен дизайн</option></select>
+        </label>
+      </div>
+      <label class="field"><span>Комментарий</span><textarea name="comment" placeholder="Текст, цвет краски, сроки…"></textarea></label>
+      <button class="btn btn-ink" type="submit">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M21.9 4.3 18.7 19.4c-.2 1-.9 1.3-1.8.8l-4.9-3.6-2.4 2.3c-.3.3-.5.5-1 .5l.4-5 9.1-8.2c.4-.4-.1-.6-.6-.2L6.2 13.1l-4.8-1.5c-1-.3-1.1-1 .2-1.5L20.5 2.9c.9-.3 1.6.2 1.4 1.4Z"/></svg>
+        Отправить в Telegram
+      </button>
+      <p class="hint">Текст заявки скопируется — просто вставьте его в чат.</p>
+    </form>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <a href="#top" class="brand"><img src="img/logo.jpg" alt="" width="44" height="44"><span>Master Shtamp<small>Печати и штампы · Ташкент</small></span></a>
+    <span>Работаем 24/7 · Доставка по Узбекистану</span>
+    <span>© <span id="year">2026</span> Master Shtamp</span>
+  </div>
+</footer>
+
+<div class="mcta">
+  <a class="btn btn-line" href="tel:+998958024343" style="background:var(--paper)">Позвонить</a>
+  <a class="btn btn-ink" href="https://t.me/mastershtampuz" target="_blank" rel="noopener">Telegram</a>
+</div>
+<div class="toast" id="toast"></div>
+
+<script>
+(function(){
+  var nav=document.getElementById('nav');
+  var onScroll=function(){nav.classList.toggle('scrolled',window.scrollY>10)};
+  onScroll();window.addEventListener('scroll',onScroll,{passive:true});
+
+  var burger=document.getElementById('burger');
+  burger.addEventListener('click',function(){
+    var open=document.body.classList.toggle('menu-open');
+    burger.setAttribute('aria-expanded',open);
+  });
+  document.querySelectorAll('#mobileMenu a').forEach(function(a){
+    a.addEventListener('click',function(){document.body.classList.remove('menu-open');burger.setAttribute('aria-expanded',false)});
+  });
+
+  var els=document.querySelectorAll('.reveal,.stamp-in');
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(entries){
+      entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}});
+    },{threshold:.12,rootMargin:'0px 0px -40px 0px'});
+    els.forEach(function(el,i){
+      var sib=el.parentElement?Array.prototype.indexOf.call(el.parentElement.children,el):0;
+      if(el.classList.contains('reveal'))el.style.transitionDelay=Math.min(sib,5)*70+'ms';
+      io.observe(el);
+    });
+  }else{els.forEach(function(el){el.classList.add('in')})}
+
+  document.getElementById('year').textContent=new Date().getFullYear();
+
+  var toast=document.getElementById('toast');
+  function showToast(t){toast.textContent=t;toast.classList.add('show');setTimeout(function(){toast.classList.remove('show')},3800)}
+
+  document.getElementById('orderForm').addEventListener('submit',function(e){
+    e.preventDefault();
+    var f=e.target;
+    if(!f.name.value.trim()){f.name.focus();showToast('Укажите, пожалуйста, ваше имя');return}
+    var msg='Здравствуйте! Хочу заказать штамп.\n'+
+      'Имя: '+f.name.value.trim()+'\n'+
+      (f.phone.value.trim()?'Телефон: '+f.phone.value.trim()+'\n':'')+
+      'Что нужно: '+f.type.value+'\n'+
+      'Размер: '+f.size.value+'\n'+
+      'Макет: '+f.mockup.value+
+      (f.comment.value.trim()?'\nКомментарий: '+f.comment.value.trim():'');
+    var open=function(){window.open('https://t.me/mastershtampuz','_blank','noopener')};
+    if(navigator.clipboard&&navigator.clipboard.writeText){
+      navigator.clipboard.writeText(msg).then(function(){showToast('Заявка скопирована — вставьте её в чат Telegram');open()},function(){showToast('Откройте чат и опишите заказ');open()});
+    }else{showToast('Откройте чат и опишите заказ');open()}
+  });
+})();
+</script>
+</body>
+</html>
